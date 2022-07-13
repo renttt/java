@@ -1,0 +1,10 @@
+public class main {
+ public static void main(String[] args) {
+ Scanner num=new Scanner(System.in);
+ int x;
+ System.out.print("enter x: ");
+ x=num.nextInt();
+ if(x<=3) //ветвление
+ System.out.print("x=x^2-3x+9="+(x*x-3*x+9));
+ else
+ System.out.print("x=1/(x^3+6)="+1/(Math.pow(x,3)+6));}}
