@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class main
+{
+ public static void main(String[] args)
+{
+ Scanner num = new Scanner(System.in);
+int a;
+do {
+ System.out.print("Enter a: ");
+ a = num.nextInt();
+}while(a<=0);
+ System.out.printf("The area of a regular hexagon with a side %d =
+%.2f", a, area(a));
+ }
+ public static double area(int a)
+{
+ return (3*Math.sqrt(3) / 2) * (a * a);
+ }
+}
