@@ -1,0 +1,14 @@
+public class main {
+ public static void main(String[] args) {
+ ex13_2 triangle = new ex13_2().createTriangle();
+ System.out.println(triangle.toString());
+ System.out.printf("The area of a given triangle is %.2f.", triangle.calcArea());
+27
+ System.out.println("\nThe perimeter of a given triangle is " +
+triangle.calcPerimeter() + ".");
+ System.out.printf("Coordinates of the intersection point of the medians of
+the triangle: X = %.2f, Y = %.2f.",
+ triangle.calcCoordinatePointMeridian()[0],
+triangle.calcCoordinatePointMeridian()[1]);
+ }
+}
