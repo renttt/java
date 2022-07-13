@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.util.Random;
+public class ex13 {
+ public static void main(String[] args) {
+ Scanner num = new Scanner(System.in);
+ int N;
+ System.out.print("Enter N: ");
+ N = num.nextInt();
+ System.out.print("Enter max (0-max) (random): ");
+ int max= num.nextInt();
+ Random r = new Random();
+ int[] arr = new int [N];
+ for (int i = 0; i < N; i++) {
+ arr[i] = r.nextInt(max) + 1;
+ System.out.print(arr[i] + " ");}
+ int index, tmp;
+ for (int i = 0; i < N; i++) {
+ index = i;
+21
+ tmp = arr[i];
+ for (int j = i + 1; j < N; j++)
+ if (arr[j] > tmp) {
+ tmp = arr[j];
+ index = j;
+ }
+ if (index == i)
+ continue;
+ tmp = arr[i];
+ arr[i] = arr[index];
+ arr[index] = tmp;
+ }
+ System.out.println();
+ for (int i = 0; i < N; i++) {
+ System.out.print(arr[i] + " ");
+ }
+ }
+}
