@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class ex7 {
+ public static void main(String[] args) {
+ Scanner num=new Scanner(System.in);
+ int x;
+ do { //цикл для корректного ввода положительного числа
+ System.out.print("Enter a positive integer: ");
+ x=num.nextInt();
+ } while(x<=0);
+for (int i=1;i<x;i++) //цикл для вывода чисел до х
+{
+ System.out.print(i+ " ");
+ if(i%15==0)
+ System.out.println();
+ }
+ }
+}
